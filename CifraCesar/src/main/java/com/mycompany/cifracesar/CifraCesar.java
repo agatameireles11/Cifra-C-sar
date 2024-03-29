@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class CifraCesar {
 
+    //EXERCICIO 1
     // Método para criptografar uma mensagem usando a cifra de César
     public static String encripta(String mensagem, int k) {
         
@@ -50,6 +51,7 @@ public class CifraCesar {
         return frequencia;
     }
 
+    //EXERCICIO 2
     // Método para realizar a criptoanálise e encontrar a chave de deslocamento mais provável
     public static int analisa(String mensagemCriptografada) {
         Map<Character, Double> frequenciaMensagem = calculaFrequencia(mensagemCriptografada);
@@ -57,7 +59,7 @@ public class CifraCesar {
         double diferencaMinima = Double.MAX_VALUE;
         int melhor = 0;
 
-        // Frequência típica de letras em textos em português
+        // Frequência das letras do portugues fornecidas pelo professor
         final Map<Character, Double> FREQUENCIA_LETRA_PORTUGUES = new HashMap<>();
         FREQUENCIA_LETRA_PORTUGUES.put('a', 14.63);
         FREQUENCIA_LETRA_PORTUGUES.put('b', 1.04);
@@ -66,14 +68,14 @@ public class CifraCesar {
         FREQUENCIA_LETRA_PORTUGUES.put('e', 12.57);
         FREQUENCIA_LETRA_PORTUGUES.put('f', 1.02);
         FREQUENCIA_LETRA_PORTUGUES.put('g', 1.30);
-        FREQUENCIA_LETRA_PORTUGUES.put('h', 0.73);
+        FREQUENCIA_LETRA_PORTUGUES.put('h', 1.28);
         FREQUENCIA_LETRA_PORTUGUES.put('i', 6.18);
         FREQUENCIA_LETRA_PORTUGUES.put('j', 0.40);
         FREQUENCIA_LETRA_PORTUGUES.put('k', 0.02);
         FREQUENCIA_LETRA_PORTUGUES.put('l', 2.78);
         FREQUENCIA_LETRA_PORTUGUES.put('m', 4.74);
-        FREQUENCIA_LETRA_PORTUGUES.put('n', 4.63);
-        FREQUENCIA_LETRA_PORTUGUES.put('o', 9.28);
+        FREQUENCIA_LETRA_PORTUGUES.put('n', 5.05);
+        FREQUENCIA_LETRA_PORTUGUES.put('o', 10.73);
         FREQUENCIA_LETRA_PORTUGUES.put('p', 2.52);
         FREQUENCIA_LETRA_PORTUGUES.put('q', 1.20);
         FREQUENCIA_LETRA_PORTUGUES.put('r', 6.53);
